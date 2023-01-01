@@ -1,6 +1,6 @@
 @extends('layouts.app')
-@section('content')
 
+@section('content')
 <section class="banner">
     <div class="container">
         <div class="row justify-content-center">
@@ -133,7 +133,8 @@
                     Finish The Project
                 </h2>
                 <p class="support">
-                    Each of you will be joining the private group and also <br> working together with team members on project
+                    Each of you will be joining the private group and also <br> working together with team members on
+                    project
                 </p>
                 <p class="mt-5">
                     <a href="#" class="btn btn-master btn-secondary me-3">
@@ -158,7 +159,8 @@
                     Big Demo Day
                 </h2>
                 <p class="support">
-                    Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
+                    Learn how to speaking in public to demonstrate your <br> final project and receive the important
+                    feedbacks
                 </p>
                 <p class="mt-5">
                     <a href="#" class="btn btn-master btn-secondary me-3">
@@ -181,7 +183,8 @@
                     Start Your Journey
                 </h2>
                 <p class="support">
-                    Learn how to speaking in public to demonstrate your <br> final project and receive the important feedbacks
+                    Learn how to speaking in public to demonstrate your <br> final project and receive the important
+                    feedbacks
                 </p>
                 <p class="mt-5">
                     <a href="#" class="btn btn-master btn-thirdty me-3">
@@ -263,7 +266,7 @@
                                 <div class="clear"></div>
                             </div>
                             <p>
-                                <a href="{{route ('checkout')}}" class="btn btn-master btn-primary w-100 mt-3">
+                                <a href="{{route ('checkout.create', 'gila-belajar')}}" class="btn btn-master btn-primary w-100 mt-3">
                                     Take This Plan
                                 </a>
                             </p>
@@ -309,7 +312,7 @@
                                 <div class="clear"></div>
                             </div>
                             <p>
-                                <a href="{{route ('checkout')}}" class="btn btn-master btn-secondary w-100 mt-3">
+                                <a href="{{route ('checkout.create','baru-mulai')}}" class="btn btn-master btn-secondary w-100 mt-3">
                                     Start With This Plan
                                 </a>
                             </p>
@@ -345,7 +348,8 @@
                         <div class="item-review">
                             <img src="{{asset('images/stars.svg')}}" alt="">
                             <p class="message">
-                                I was not really into code but after they teach me how to train my logic then I was really fall in love with code
+                                I was not really into code but after they teach me how to train my logic then I was
+                                really fall in love with code
                             </p>
                             <div class="user">
                                 <img src="{{asset('images/fanny_photo.png')}}" class="photo" alt="">
@@ -383,7 +387,8 @@
                         <div class="item-review">
                             <img src="{{asset('images/stars.svg')}}" alt="">
                             <p class="message">
-                                My background is design and art but I do really love how to make my design working in the development phase
+                                My background is design and art but I do really love how to make my design working in
+                                the development phase
                             </p>
                             <div class="user">
                                 <img src="{{asset('images/beatrice.png')}}" class="photo" alt="">
@@ -405,7 +410,8 @@
                             All Rights Reserved. Copyright Laracamp BWA Indonesia.
                         </p>
                     </div>
-                </div>
+           
+     </div>
             </div>
         </div>
     </div>

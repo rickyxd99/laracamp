@@ -30,32 +30,32 @@
                     </div>
                     <div class="col-lg-1 col-12"></div>
                     <div class="col-lg-6 col-12">
-                        <form action="{{route('success-checkout')}}" class="basic-form">
+                        <form action="{{route('checkout.store', $camp->id)}}" method="post" class="basic-form">
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Full Name</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Full Name</label>
+                                <input name="name" type="text" class="form-control" />
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Email Address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Email Address</label>
+                                <input name="email" type="email" class="form-control" />
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Occupation</label>
-                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Occupation</label>
+                                <input name="occupation" type="text" class="form-control" />
                             </div>
                             <div class="mb-4">
-                                <label for="exampleInputEmail1" class="form-label">Card Number</label>
-                                <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label class="form-label">Card Number</label>
+                                <input name="card_number" type="number" class="form-control" />
                             </div>
                             <div class="mb-5">
                                 <div class="row">
                                     <div class="col-lg-6 col-12">
-                                        <label for="exampleInputEmail1" class="form-label">Expired</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label class="form-label">Expired</label>
+                                        <input name="expired" type="month" class="form-control" />
                                     </div>
                                     <div class="col-lg-6 col-12">
-                                        <label for="exampleInputEmail1" class="form-label">CVC</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <label class="form-label">CVC</label>
+                                        <input name="cvc" type="number" class="form-control" maxlength="3"/>
                                     </div>
                                 </div>
                             </div>
