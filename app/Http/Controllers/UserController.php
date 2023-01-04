@@ -32,7 +32,7 @@ class UserController extends Controller
             'email_verified_At' => date('Y-m-d H:i:s', time()),
         ];
 
-        $user = User::whereEmail($data['Email'])->first();
+        $user = User::whereEmail($data['email'])->first();
         if(!$user) {
             $user = User::create($data);
             Mail::to($user->email)->send(new AfterRegister($user));

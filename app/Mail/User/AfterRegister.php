@@ -5,6 +5,8 @@ namespace App\Mail\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
+use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
 class AfterRegister extends Mailable
@@ -21,14 +23,9 @@ class AfterRegister extends Mailable
         $this->user = $user;
     }
 
-    /**
-     * Build the message.
-     *
-     * @return $this
-     */
     public function build()
     {
-        return $this->subject('Registration on Laracamp')->markdown('emails.user.afterRegister',[
+        return $this->subject('Registration on Laracamp')->markdown('emails.user.afterRegister', [
             'user' => $this->user
         ]);
     }

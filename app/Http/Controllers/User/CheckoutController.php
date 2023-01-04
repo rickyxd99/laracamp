@@ -9,7 +9,9 @@ use App\Models\Camp;
 use App\Models\User;
 use App\Models\Checkout;    
 use Auth;
+use Mail;
 use App\Http\Requests\User\Checkout\Store;
+use App\Mail\Checkout\AfterCheckout;
 
 
 class CheckoutController extends Controller
@@ -39,7 +41,8 @@ class CheckoutController extends Controller
 
             // create checkout
             $checkout = Checkout::create($data);
-
+            //sending notification via email
+            Mail::to(Auth::user()->email)->send(new AfterCheckout($checkout));
 
             DB::commit();
         }
