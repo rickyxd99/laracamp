@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('_layouts.app')
 
 @section('content')
 <section class="checkout">
@@ -14,6 +14,9 @@
                 <h2 class="primary-header ">
                     Berhasil Checkout
                 </h2>
+                <p>
+                    Silahkan menuju halaman Dashboard dan melakukan pembayaran
+                </p>
                 <a href="{{route('dashboard')}}" class="btn btn-primary mt-3">
                     My Dashboard
                 </a>

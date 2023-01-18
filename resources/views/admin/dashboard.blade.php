@@ -29,7 +29,7 @@
                                         <td>$ {{$checkout->Camp->price}}</td>
                                         <td>{{$checkout->created_at->format('M d Y')}}</td>
                                         <td>{{$checkout->payment_status}}</td>
-                                        <td>
+                                        {{-- <td>
                                             @if ($checkout->is_paid)
                                                 <span class="badge bg-success">Paid</span>
                                             @else
@@ -42,11 +42,10 @@
                                                 @csrf
                                                 <button type="submit" class="btn btn-primary btn-sm">
                                                     Set to Paid
-                                                {{-- </button> --}}
-                                                </div>
+                                                </button>
                                             </form>
                                             @endif
-                                        </td>
+                                        </td> --}}
                                     </tr>
                                 @empty
                                     <tr>

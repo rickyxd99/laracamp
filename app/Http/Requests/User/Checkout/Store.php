@@ -3,6 +3,7 @@
 namespace App\Http\Requests\User\Checkout;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Auth;
 
 class Store extends FormRequest
 {
@@ -15,13 +16,18 @@ class Store extends FormRequest
     }
 
     /**
-     * Get the validation rules that apply to the request.@return array
+     * Get the validation rules that apply to the request. @return array<string, mixed>
      */
     public function rules()
     {
+        $expiredValidation = date('Y-m', time());
+
         return [
-            'name' => 'required',
-            
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users,email,'.Auth::id().',id',
+            'occupation' => 'required|string',
+            'phone' => 'required|string',
+            'address' => 'required|string',
         ];
     }
 }

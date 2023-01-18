@@ -35,7 +35,13 @@ Route::middleware('auth')->group(function() {
 //socialite routes
 Route::get('sign-in-google', [UserController::class, 'google'])->name('user.login.google');
 Route::get('auth/google/callback', [UserController::class, 'handleProviderCallback'])->name('user.google.callback');
-        
+
+
+// midtrans routes
+Route::get('payment/success', [CheckoutController::class, 'midtransCallback']);
+Route::post('payment/success', [CheckoutController::class, 'midtransCallback']);
+
+
  // user dashboard
  Route::prefix('user/dashboard')->namespace('User')->name('user.')->middleware('ensureUserRole:user')->group(function(){
     Route::get('/', [UserDashboard::class, 'index'])->name('dashboard'); // called by route('user.dashboard')

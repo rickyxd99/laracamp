@@ -40,7 +40,7 @@
 	                            <a href="#" class="dropdown-item"
 	                                onclick="event.preventDefault(); document.getElementById('logout-form').submit()">Sign
 	                                Out</a>
-	                            <form id="logout-form" action="{{route('logout')}}" method="post" style="display:none">
+	                            <form id="logout-form" action="{{route('logout')}}" method="get" style="display:none">
 	                                <input type="hidden" name="_token" value="{{csrf_token()}}">
 	                            </form>
 	                        </li>

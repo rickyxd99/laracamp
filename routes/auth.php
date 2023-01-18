@@ -17,21 +17,24 @@ Route::middleware('guest')->group(function () {
 
     Route::post('register', [RegisteredUserController::class, 'store']);
     
-    Route::get('login',function() {
-        return view('auth.user.login');
-    })->name('login');
+    Route::get('login', [UserController::class, 'login'])->name('login');
+
+
+    // Route::get('login',function() {
+    //     return view('auth.user.login');
+    // })->name('login');
     // Route::get('login', [UserController::class, 'login']
     // {
     //     return view('login');
     // })->name('login');
 
-    Route::get('login/admin', function()
-    {
-        return view('auth.login');
-    })->name('login.admin');
+    // Route::get('login/admin', function()
+    // {
+    //     return view('auth.login');
+    // })->name('login.admin');
 
-    // Route::get('login/admin', [AuthenticatedSessionController::class, 'create'])
-    // ->name('login.admin');
+    Route::get('login/admin', [AuthenticatedSessionController::class, 'create'])
+    ->name('login.admin');
 
     Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
